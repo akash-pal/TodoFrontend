@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter} from "react-router-dom";
+import { Provider } from "react-redux";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
+import ErrorBoundary from "./components/ErrorBoundary";
+import { ConfigureStore } from "./store/configureStore";
+import Main from "./components/MainComponent";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const store = ConfigureStore();
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <div className="App">
+          <BrowserRouter>
+            <ErrorBoundary>
+              <Main />
+            </ErrorBoundary>
+          </BrowserRouter>
+        </div>
+      </Provider>
+    );
+  }
 }
-
-export default App;

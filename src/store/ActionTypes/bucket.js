@@ -1,0 +1,3 @@
+export const BUCKET_LOADING = "BUCKET LOADING";
+export const BUCKET_FAILED = "BUCKET FAILED";
+export const BUCKET_SUCCESS = "BUCKET SUCCESS";

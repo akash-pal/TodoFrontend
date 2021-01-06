@@ -1,0 +1,10 @@
+export const TODOS_LOADING = "TODOS LOADING";
+export const TODOS_FAILED = "TODOS FAILED";
+
+export const TODOS_SUCCESS = "TODOS SUCCESS";
+
+export const ADD_TODO_SUCCESS = "ADD TODO SUCCESS";
+
+export const REMOVE_TODO = "REMOVE TODO";
+export const EDIT_TODO = "EDIT TODO";
+export const UPDATE_TODO_STATUS = "UPDATE TODO STATUS";
